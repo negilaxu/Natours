@@ -1,3 +1,25 @@
+/*
+========Guidelines=============
+0 - 600px: Phone
+600px - 900px: Tablet Potrait
+900px - 1200px: Tablet Landscape
+1200px - 1800px is where our normal styles applies
+1800px+: Big Desktop
+--------------------------------
+Breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+-----------------
+1em = 16px
+------------------
+600px/16px=37.5em
+900px/16px=56.25em
+1200px/16px=75em
+1800px/16px=112.5em
+-------------------
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -45,9 +67,25 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
 }
 
 body {
@@ -55,7 +93,6 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
 }
 
 .heading-primary {
