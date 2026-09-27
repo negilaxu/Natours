@@ -502,7 +502,7 @@ body {
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
   }
   .card:hover .card__side--front {
-    transform: rotateY(-180deg);
+    transform: rotateY(0);
   }
   .card__details {
     padding: 1rem 3rem;
